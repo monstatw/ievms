@@ -313,7 +313,7 @@ install_ie_xp() { # vm url md5
     copy_to_vm "${1}" "${src}" "${dest}"
 
     log "Installing IE" # Always "fails"
-    guest_control_exec "${1}" "${dest}" /passive /norestart || true
+    guest_control_exec "${1}" "${dest}" /passive /norestart /update-no || true
 
     shutdown_xp "${1}"
 }
